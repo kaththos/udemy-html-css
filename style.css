@@ -2,6 +2,8 @@
 * {
   margin: 0;
   padding: 0;
+  /* box-sizing is not inherited from parent to child. That's why it goes under the universal element selector */
+  box-sizing: border-box;
 }
 /* body properties on body will be inherited by all children 
 Sets general styles for document, which are overridden by more specific
@@ -17,7 +19,7 @@ body {
 
 /* Center contents on page */
 .container {
-  width: 850px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -48,8 +50,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
 }
 
 /* Smaller Elements */
@@ -90,6 +91,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 p {
@@ -116,6 +118,7 @@ li:last-child {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 #author {
@@ -264,4 +267,16 @@ nav {
   clear: both;
   content: "";
   display: block;
+}
+
+article {
+  width: 70%;
+  float: left;
+}
+aside {
+  width: 25%;
+  float: right;
+}
+footer {
+  clear: both;
 }
