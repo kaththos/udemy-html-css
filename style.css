@@ -1,0 +1,267 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* body properties on body will be inherited by all children 
+Sets general styles for document, which are overridden by more specific
+style rules */
+/* Page Sections */
+body {
+  color: #444;
+  font-family: sans-serif;
+  /* body is the parent element for the like button w/ position: fixed*/
+  position: relative;
+  border-top: #1098ad solid 6px;
+}
+
+/* Center contents on page */
+.container {
+  width: 850px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  /* Use margin-bottom to create vertical space.
+  Avoid mixing bottom and top. */
+  margin-bottom: 60px;
+  /* height: 80px; */
+}
+
+nav {
+  font-size: 20px;
+  text-align: center;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+  /* position: relative; */
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
+
+/* Smaller Elements */
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  /* line height is 1.5x the font-size */
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.related {
+  list-style: none;
+}
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body {
+  background-color: ;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* Styling Links */
+/* Always define states in this order */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+button::first-letter {
+  color: palevioletred;
+}
+
+/* pseudo-element uses :: */
+/* pseudo elements are inline */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2 {
+  position: relative;
+}
+
+/* A purely CSS element - does not exist in the HTML */
+h2::after {
+  /* Must define content property - Can be an empty string as a default */
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  /* change to inline-block to add padding */
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+/* Adjacent sibling + */
+/* h3 + p::first-line {
+  color: red;
+} */
+
+/* Floats */
+
+/* Note: an element's height will collapse if all of its children are floats */
+.author-img {
+  /* float takes element out of document's flow */
+  /* all other elements will now "float" around this element */
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+/* "Clear" a float - fixes parent's height collapse */
+.clear {
+  clear: both;
+}
+
+/* "clear fix hack" with pseudo element - avoid cluttering up HTML with empty divs to clear floats*/
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
