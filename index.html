@@ -10,26 +10,33 @@
     <header class="main-header clearfix">
       <h1>📘 The Code Magazine</h1>
       <nav>
-        <a href="blog.html" target="_blank">Blog</a>
+        <a href="blog.html">Blog</a>
         <a href="#" target="_blank">Challenges</a>
-        <a href="#" target="_blank">Flexbox</a>
-        <a href="#">CSS Grid</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="css-grid.html">CSS Grid</a>
       </nav>
 
       <!-- <div class="clear"></div> -->
     </header>
 
+    <!-- row class only needed for flexboy layout -->
+    <!-- <div class="row"> -->
     <article>
       <header class="post-header">
         <h2>The Basic Language of the Web: HTML</h2>
-        <img
+        
+        <div class="author-box">
+
+          <img
           src="img/laura-jones.jpg"
           alt="Headshot of Laura Jones"
           width="50"
           height="50"
           class="author-img"
-        />
-        <p id="author" class="author">Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+          />
+          <p id="author" class="author">Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        </div>
+
         <img
           src="img/post-img.jpg"
           alt="HTML code on a screen"
@@ -106,38 +113,47 @@
     <aside>
       <h4>Related Posts</h4>
       <ul class="related">
-        <li>
+        <li class="related-post">
           <img
             src="img/related-1.jpg"
             alt="Man types on laptop computer"
             height="75"
             width="75"
           />
-          <a href="#" target="_blank">How to Learn Web Development</a>
-          <p class="related-author">By Jonas Schmedtmann</p>
+          <div>
+
+            <a href="#" class="related-link">How to Learn Web Development</a>
+            <p class="related-author">By Jonas Schmedtmann</p>
+          </div>
         </li>
-        <li>
+        <li class="related-post">
           <img
             src="img/related-2.jpg"
             alt="A bolt of lightning across a dark sky"
             height="75"
             width="75"
           />
-          <a href="#" target="_blank">The Unknown Powers of CSS</a>
-          <p class="related-author">By Jim Dillon</p>
+          <div>
+            <a href="#" class="related-link">The Unknown Powers of CSS</a>
+            <p class="related-author">By Jim Dillon</p>
+          </div>
+
         </li>
-        <li>
+        <li class="related-post">
           <img
             src="img/related-3.jpg"
             alt="A page of code"
             height="75"
             width="75"
           />
-          <a href="#" target="_blank">Why JavaScript Is Awesome</a>
-          <p class="related-author">By Matilda</p>
+          <div>
+            <a href="#" class="related-link">Why JavaScript Is Awesome</a>
+            <p class="related-author">By Matilda</p>
+          </div>
         </li>
       </ul>
     </aside>
+  <!-- </div> -->
     <footer>
       <p id="copyright" class="copyright text">Copyright &copy; 2027 by The Code Magazine</p>
     </footer>

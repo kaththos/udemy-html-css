@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .el--1 {
+        background-color: blueviolet;
+      }
+      .el--2 {
+        background-color: orangered;
+      }
+      .el--3 {
+        background-color: green;
+        height: 150px;
+      }
+      .el--4 {
+        background-color: goldenrod;
+      }
+      .el--5 {
+        background-color: palevioletred;
+      }
+      .el--6 {
+        background-color: steelblue;
+      }
+      .el--7 {
+        background-color: yellow;
+      }
+      .el--8 {
+        background-color: crimson;
+      }
+
+      .container {
+        /* STARTER */
+        font-family: sans-serif;
+        background-color: #ddd;
+        font-size: 32px;
+        margin: 40px;
+
+        /* FLEXBOX */
+        /* Vertically centering items w/ align-items one of
+        flexbox's most important features */
+        /* these are for parent container */
+        display: flex;
+
+        /* cross-axis - vertical */
+        align-items: center;
+
+        /* main axis - horizontal */
+        justify-content: flex-start;
+        /* similar to margin, but better for flex items than margin */
+        /* gap: 30px; */
+      }
+
+      .el {
+        /* defaults 
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        /* size flex items with width - more a recommendation than a hard rule */
+        /* flex-basis: 200px; */
+        /* flex-shrink: 0;
+        flex-grow: 1; */
+
+        /* short hand - use this, not the 3 individuals */
+        flex: 0 0 200px;
+      }
+
+      /* flex items */
+      .el--1 {
+        align-self: flex-start;
+        /* order: 2; */
+        /* flex-grow: 1; */
+      }
+
+      .el--5 {
+        align-self: stretch;
+        order: 1;
+      }
+
+      .el--6 {
+        /* order changes order of items in the viewport, without changing HTML order */
+        /* default order is 0 for all flex items */
+        order: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="el el--1">HTML</div>
+      <div class="el el--2">and</div>
+      <div class="el el--3">CSS</div>
+      <div class="el el--4">are</div>
+      <div class="el el--5">amazing</div>
+      <div class="el el--6">languages</div>
+      <div class="el el--7">to</div>
+      <div class="el el--8">learn</div>
+    </div>
+  </body>
+</html>
